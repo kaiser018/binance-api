@@ -43,8 +43,8 @@ export default class {
         };
 
         this.ws.on('ping', () => {
-          const pong = this.ws.pong();
-          console.log({pong});
+          console.log('PING');
+          this.ws.pong();
         });
 
         this.ws.onclose = () => {
@@ -60,14 +60,10 @@ export default class {
                 this.handlers.get(message.e).forEach(({callback}) => {
                   callback(message);
                 });
-              } else {
-                // console.warn('Unprocessed method', message);
               }
-            } else {
-              // console.warn('Unprocessed method', message);
             }
           } catch (e) {
-            // console.warn('Parse message failed', e);
+            console.error('Parse message failed', {data}, e);
           }
         };
 
