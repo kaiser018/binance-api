@@ -3,7 +3,7 @@ import qs from 'qs';
 
 const API_URL = 'https://api.binance.com';
 
-class Api {
+export default class {
 
     constructor(apiKey, apiSecret) {
         this.apiKey = apiKey;
@@ -47,6 +47,4 @@ class Api {
                 } else throw e;
             });
 
-}
-
-export default Api;
+};

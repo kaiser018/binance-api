@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,9 @@
     "axios": "^0.27.2",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.0",
-    "qs": "^6.10.3"
+    "log-timestamp": "^0.3.0",
+    "nanoid": "^3.3.4",
+    "qs": "^6.10.3",
+    "ws": "^8.6.0"
   }
 }
